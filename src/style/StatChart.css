@@ -1,0 +1,56 @@
+/* StatChart.css */
+.stat-chart {
+  background: rgba(255, 255, 255, 0.95); /* Semi-transparent white for contrast */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  font-family: 'Press Start 2P', sans-serif; /* Consistent font */
+  text-align: center;
+}
+
+.stat-chart h3 {
+  color: #FF0000; /* Pokemon red */
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Customizing Recharts with Pokemon colors */
+.stat-chart .recharts-bar-bar {
+  fill: #FFDE00; /* Default yellow, but we'll override per stat if possible */
+}
+
+.recharts-wrapper{
+  font-size: 8px;
+}
+
+/* Stat-specific colors (applied via data transformation in JS) */
+.stat-chart .recharts-bar-bar[data-stat="hp"] { fill: #FF0000; } /* Red for HP */
+.stat-chart .recharts-bar-bar[data-stat="attack"] { fill: #F08030; } /* Fire orange for Attack */
+.stat-chart .recharts-bar-bar[data-stat="defense"] { fill: #6890F0; } /* Water blue for Defense */
+.stat-chart .recharts-bar-bar[data-stat="special-attack"] { fill: #F85888; } /* Psychic pink for Special Attack */
+.stat-chart .recharts-bar-bar[data-stat="special-defense"] { fill: #78C850; } /* Grass green for Special Defense */
+.stat-chart .recharts-bar-bar[data-stat="speed"] { fill: #F8D030; } /* Electric yellow for Speed */
+
+/* Tooltip and Legend styling */
+.stat-chart .recharts-tooltip-wrapper {
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 0.8rem;
+}
+
+.stat-chart .recharts-legend-item-text {
+  color: #3B4CCA;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stat-chart {
+    padding: 10px;
+  }
+  .stat-chart h3 {
+    font-size: 1rem;
+  }
+  /* Recharts will auto-scale, but you can set width/height dynamically in JS if needed */
+}
