@@ -1,0 +1,41 @@
+/* SearchBar.css */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: 2px solid #3B4CCA; /* Blue border */
+  border-radius: 25px; /* Rounded for a modern, pill-like look */
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  color: #333;
+  font-family: 'Press Start 2P', sans-serif; /* Consistent font */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input::placeholder {
+  color: #666;
+  font-style: italic;
+}
+
+.search-bar input:focus {
+  border-color: #FF0000; /* Red on focus */
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2); /* Subtle red glow */
+  background: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-bar input {
+    max-width: 90%;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
