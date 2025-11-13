@@ -1,0 +1,193 @@
+/* App.css */
+.App {
+  text-align: center;
+  min-height: 100vh;
+  font-family: 'Press Start 2P', sans-serif; /* Retro Pokemon font */
+  background: linear-gradient(135deg, #FFDE00 0%, #FF0000 50%, #3B4CCA 100%); /* Vibrant Pokemon gradient */
+}
+
+/* Header */
+.App-header {
+  background: linear-gradient(90deg, #FF0000, #3B4CCA); /* Pokemon red to blue */
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(12px + 1.5vmin);
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.App-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.App-header nav a {
+  color: #ffde00;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.App-header nav a:hover {
+  color: #ffffff;
+}
+
+/* Page Container */
+.page-container {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Pokemon List */
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Pokemon Card */
+.pokemon-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-transform: capitalize;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pokemon-card img {
+  width: 120px;
+  height: 120px;
+}
+
+/* Pokemon Detail */
+.pokemon-detail {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.pokemon-detail h2 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.pokemon-detail img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1rem;
+}
+
+/* Pokemon Types */
+.types {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.type {
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  color: white;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.type.grass { background-color: #78C850; }
+.type.fire { background-color: #F08030; }
+.type.water { background-color: #6890F0; }
+.type.bug { background-color: #A8B820; }
+.type.normal { background-color: #A8A878; }
+.type.poison { background-color: #A040A0; }
+.type.electric { background-color: #F8D030; color: black; }
+.type.ground { background-color: #E0C068; color: black; }
+.type.fairy { background-color: #EE99AC; color: black; }
+.type.fighting { background-color: #C03028; }
+.type.psychic { background-color: #F85888; }
+.type.rock { background-color: #B8A038; }
+.type.ghost { background-color: #705898; }
+.type.ice { background-color: #98D8D8; color: black; }
+.type.dragon { background-color: #7038F8; }
+.type.dark { background-color: #705848; }
+.type.steel { background-color: #B8B8D0; color: black; }
+.type.flying { background-color: #A890F0; }
+
+/* Abilities, Moves, Evolution */
+.pokemon-detail ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pokemon-detail li {
+  background-color: #f0f0f0;
+  margin: 0.25rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-transform: capitalize;
+}
+
+/* Comparison Tool */
+.comparison-tool {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.comparison-tool input {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.comparison {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.comparison h3 {
+  text-transform: capitalize;
+}
+
+/* Loading */
+div[role="alert"] {
+  padding: 1rem;
+  background-color: #ffcc00;
+  color: #000;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+/* Loading and Error States */
+div[style*="Loading"] {
+  font-size: 1.2rem;
+  color: #3B4CCA;
+  padding: 20px;
+}
+
+div[style*="Error"] {
+  font-size: 1.2rem;
+  color: #FF0000;
+  padding: 20px;
+}
